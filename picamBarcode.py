@@ -6,24 +6,25 @@ from PIL import Image
 
 class BarCode:
     def __init__(self):
-        camera = PiCamera()
-    def read():
+	pass
+
+    def read(self):
+ 	camera = PiCamera()
         for i in range(30):
             stream = BytesIO()
-            camera.capture(stream, format="jpg")
+            camera.capture(stream, format="jpeg")
             stream.seek(0)
             image = Image.open(stream)
             decoded_image = decode(image)
+	    print(decoded_image)
             if decoded_image:
                 return decoded_image
                 break
             sleep(1)
-        return -1
-    def close():
         camera.close()
         del(camera)
+        return -1
 
-BarCode bar()
+bar=BarCode()
 result = bar.read()
 print(result)
-bar.close()
