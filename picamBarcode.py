@@ -12,11 +12,11 @@ def FrameCapture(path):
   
     while success: 
         success, image = vidObj.read() 
-		decoded_image = decode(image)
-		if decoded_image:
-			print(str(count) + " " + decoded_image)
-			return 1
-		count += 1
+	decoded_image = decode(image)
+	if decoded_image:
+		print(str(count) + " " + decoded_image)
+		return 1
+	count += 1
 
 if __name__ == '__main__': 
     FrameCapture("home\\pi\\Desktop\\tklab\\barcode\\opencv\\openCV.mp4") 
